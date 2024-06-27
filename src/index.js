@@ -267,6 +267,7 @@ const loadPlayer = (params, resolve, reject) => {
   script.async = true;
   script.charset = 'utf-8';
   script.src = urls.getUrl(params);
+  script.crossOrigin = 'anonymous';
 
   if (refNodeInsert === REF_NODE_INSERT_REPLACE) {
     refNodeParent.appendChild(script);
